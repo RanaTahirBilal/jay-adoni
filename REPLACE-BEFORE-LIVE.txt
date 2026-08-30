@@ -1,0 +1,21 @@
+BEFORE THIS SITE GOES ON JAY'S DOMAIN
+=====================================
+
+Three images in img/ are press photographs used as placeholders for the demo.
+They are NOT licensed for publication and must be swapped before the site is
+deployed anywhere public:
+
+  img/jay-portrait.jpg   hero portrait
+  img/jay-close.jpg      chapter 01, The Beginning
+  img/jay-doorway.jpg    chapter 07, What Follows
+
+Each one is also marked with an HTML comment in index.html — search for
+"PLACEHOLDER IMAGE".
+
+Replace with photographs Jay owns, or licensed copies of the originals.
+Keep the same crops: 4:5 portrait, 1:1 square, 4:5 portrait.
+
+Every other image in img/ is from Jay's own Instagram account.
+
+The page is currently set to noindex,nofollow. Remove that only when the
+images above have been replaced.

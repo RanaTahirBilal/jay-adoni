@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jay Adoni &middot; Shoemaker, New York</title>
+<meta name="description" content="Jay Adoni came from Israel as a teenager and opened a shoe factory in Brooklyn. Decades later his family brought shoemaking back to Manhattan for the first time in over sixty years.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23241C16'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23C9A227' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --paper:#F7F3EA; --ivory:#EFE8DA; --ink:#1C1713; --ink-2:#463A31; --mid:#6B5C50;
+  --leather:#8A4B27; --brass:#7A5C0F; --brass-lt:#D2A93C; --navy:#241C16; --rule:#DDD2BF;
+  --disp:"Libre Caslon Display",Georgia,serif;
+  --body:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --cond:"Barlow Condensed",var(--body);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 30px}
+.col{max-width:660px}
+
+nav{position:sticky;top:0;z-index:40;background:rgba(247,243,234,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.navin{max-width:1120px;margin:0 auto;padding:14px 30px;display:flex;
+  align-items:baseline;justify-content:space-between;gap:20px}
+.mark{font-family:var(--disp);font-size:20px}
+.nl{display:flex;gap:24px}
+.nl a{font-family:var(--cond);font-size:15px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--mid);text-decoration:none;font-weight:600}
+.nl a:hover{color:var(--leather)}
+
+/* hero */
+.hero{padding:78px 0 0}
+.eyebrow{font-family:var(--cond);font-size:14px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--leather);font-weight:600;margin:0 0 18px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(36px,5.6vw,72px);line-height:1.04;
+  letter-spacing:-.016em;margin:0 0 24px;text-wrap:balance;max-width:16ch}
+h1 em{font-style:italic;color:var(--leather)}
+.stand{font-size:clamp(18px,1.6vw,22px);line-height:1.56;color:var(--ink-2);max-width:54ch;margin:0}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:end;margin-top:52px}
+.portrait-slot{aspect-ratio:4/5;background:var(--ivory);border:1px solid var(--rule);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  padding:26px;text-align:center}
+.portrait-slot svg{opacity:.34}
+.portrait-slot b{font-family:var(--cond);font-size:14px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mid);font-weight:600}
+.portrait-slot span{font-size:14px;color:var(--mid);max-width:24ch;line-height:1.5}
+
+/* figures */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--rule);margin-top:64px}
+.fig{padding:26px 24px;border-right:1px solid var(--rule)}
+.fig:last-child{border-right:0}
+.fig b{display:block;font-family:var(--disp);font-size:clamp(30px,3.6vw,44px);line-height:1;margin-bottom:9px}
+.fig span{font-family:var(--cond);font-size:14px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--mid);font-weight:600;line-height:1.35;display:block}
+
+section{padding:76px 0;border-bottom:1px solid var(--rule)}
+.band-ivory{background:var(--ivory);border-bottom:0}
+.band-navy{background:var(--navy);color:var(--paper);border-bottom:0}
+.band-navy .eyebrow{color:var(--brass-lt)} .band-navy h2{color:var(--paper)}
+.band-navy p{color:#CBBEB0}
+.snum{font-family:var(--cond);font-size:13.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--brass);font-weight:600;margin:0 0 12px}
+.band-navy .snum{color:var(--brass-lt)}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(27px,3.7vw,44px);line-height:1.08;
+  letter-spacing:-.014em;margin:0 0 20px;text-wrap:balance;max-width:19ch}
+p{margin:0 0 18px;color:var(--ink-2)}
+p.big{font-size:19px;line-height:1.62;color:var(--ink)}
+.band-navy p.big{color:var(--paper)}
+
+/* the arc */
+.arc{border-top:1px solid var(--rule);margin-top:26px}
+.act{display:grid;grid-template-columns:158px 1fr;gap:28px;padding:28px 0;border-bottom:1px solid var(--rule)}
+.act .when{font-family:var(--disp);font-size:25px;color:var(--leather);line-height:1.1}
+.act .when small{display:block;font-family:var(--cond);font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--mid);margin-top:6px;font-weight:600}
+.act h3{font-family:var(--body);font-weight:600;font-size:18.5px;margin:0 0 7px}
+.act p{margin:0;font-size:16.5px}
+
+/* plates */
+figure{margin:0}
+figcaption{font-family:var(--cond);font-size:13px;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--mid);margin-top:10px;font-weight:600}
+.band-navy figcaption{color:#9C8B7C}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.mosaic figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+.wide{margin-top:44px}
+.plate img{border:1px solid var(--rule)}
+.band-navy .plate img{border-color:rgba(247,243,234,.2)}
+
+/* anatomy diagram */
+.anat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:34px}
+.part{background:var(--paper);padding:20px 18px}
+.part b{display:block;font-family:var(--disp);font-size:19px;margin-bottom:6px}
+.part span{font-size:14.5px;color:var(--mid);line-height:1.5}
+
+/* cities */
+.cities{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;
+  border-top:1px solid rgba(247,243,234,.25)}
+.city{padding:26px 22px;border-right:1px solid rgba(247,243,234,.18)}
+.city:last-child{border-right:0}
+.city b{display:block;font-family:var(--disp);font-size:27px;color:var(--paper);margin-bottom:8px}
+.city span{font-family:var(--cond);font-size:13.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--brass-lt);font-weight:600;display:block;margin-bottom:10px}
+.city p{margin:0;font-size:15.5px}
+
+blockquote{margin:34px 0 0;padding:0 0 0 24px;border-left:3px solid var(--leather);max-width:58ch}
+blockquote p{font-family:var(--disp);font-size:clamp(20px,2.2vw,27px);line-height:1.35;
+  color:var(--ink);margin:0 0 12px}
+blockquote cite{font-style:normal;font-family:var(--cond);font-size:13.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mid);font-weight:600}
+
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;margin-top:10px}
+.cgrid h4{font-family:var(--cond);font-size:13.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--brass-lt);margin:0 0 10px;font-weight:600}
+.cgrid p{margin:0;font-size:16.5px;line-height:1.7}
+footer{padding:28px 0 44px;background:var(--navy);color:#A9998A;font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media(max-width:860px){
+  .nl{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .act{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .fig{border-right:0;border-bottom:1px solid var(--rule)}
+  .duo,.trio{grid-template-columns:1fr}
+  .mosaic{grid-template-columns:1fr 1fr}
+  .mosaic figure:nth-child(1){grid-column:span 2;grid-row:auto}
+  .cities{grid-template-columns:1fr}
+  .city{border-right:0;border-bottom:1px solid rgba(247,243,234,.18)}
+  section{padding:52px 0} .hero{padding:48px 0 0}
+}
+/* personal story layout */
+.hero-personal{padding:74px 0 0}
+.name-line{font-family:var(--cond);font-size:15px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--mid);font-weight:600;margin:0 0 22px}
+.hero-split{display:grid;grid-template-columns:1fr .78fr;gap:52px;align-items:center;margin-top:40px}
+.portrait-slot.big{aspect-ratio:4/5}
+.hero-portrait img{border:1px solid var(--rule)}
+.hero-portrait figcaption{font-family:var(--disp);font-size:19px;letter-spacing:0;text-transform:none;color:var(--ink);margin-top:12px}
+.kicker{font-family:var(--disp);font-size:clamp(19px,1.8vw,24px);line-height:1.45;color:var(--ink-2);
+  max-width:44ch;margin:22px 0 0;font-style:italic}
+.chapter-lead{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:38px}
+.chapter-lead.rev .txt{order:2}
+.pull{font-family:var(--disp);font-size:clamp(23px,2.7vw,36px);line-height:1.24;letter-spacing:-.012em;
+  color:var(--ink);margin:40px 0;max-width:24ch}
+.band-navy .pull{color:var(--paper)}
+.legacy{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin-top:34px}
+.leg{background:var(--paper);padding:24px 22px}
+.leg b{display:block;font-family:var(--disp);font-size:21px;margin-bottom:7px}
+.leg span{font-size:15px;color:var(--mid);line-height:1.55}
+@media(max-width:860px){
+  .hero-split,.chapter-lead{grid-template-columns:1fr;gap:26px}
+  .chapter-lead.rev .txt{order:0}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="navin">
+  <span class="mark">Jay Adoni</span>
+  <span class="nl">
+    <a href="#origin">The Beginning</a><a href="#brooklyn">Brooklyn</a>
+    <a href="#return">The Return</a><a href="#craft">The Craft</a>
+    <a href="#name">His Name</a><a href="#legacy">What Follows</a>
+  </span>
+</div></nav>
+
+<header class="hero-personal"><div class="wrap">
+  <p class="name-line">Jay Adoni &middot; Shoemaker &middot; New York</p>
+  <h1>He arrived with nothing to inherit, <em>and made a trade his own.</em></h1>
+  <p class="stand">A teenager from Israel who went into shoes, opened a factory in Brooklyn in the
+     1970s, and lived long enough to watch his family bring shoemaking back to Manhattan &mdash;
+     the first time in over sixty years anyone had.</p>
+
+  <div class="hero-split">
+    <!-- PLACEHOLDER IMAGE: press photograph, to be replaced with Jay's own before this goes live -->
+    <figure class="plate hero-portrait">
+      <img src="img/jay-portrait.jpg" alt="Jay Adoni in the showroom" width="1120" height="1400">
+      <figcaption>Jay Adoni</figcaption>
+    </figure>
+    <div>
+      <figure class="plate"><img src="img/jayadoni-insoles.jpg" alt="Jay Adoni branded insoles stamped Made in Italy" width="700" height="700"><figcaption>His name, stamped into the insole</figcaption></figure>
+      <p class="kicker">Sixty years in, the name on the shoe is finally his own.</p>
+    </div>
+  </div>
+
+  <div class="figs">
+    <div class="fig"><b>1970s</b><span>His first factory<br>Brooklyn</span></div>
+    <div class="fig"><b>60+</b><span>Years before New York<br>made shoes again</span></div>
+    <div class="fig"><b>220</b><span>Pairs a day<br>West 38th Street</span></div>
+    <div class="fig"><b>3</b><span>Generations in<br>the same trade</span></div>
+  </div>
+</div></header>
+
+<section id="origin"><div class="wrap">
+  <div class="col">
+    <p class="snum">01 &mdash; The Beginning</p>
+    <h2>Nobody can copy where you started.</h2>
+    <p class="big">Jay Adoni came to the United States from Israel as a teenager. No family firm was
+       waiting for him, no design school, no introductions. He went into shoes the only way open to
+       him at the time &mdash; onto the floor of somebody else&rsquo;s business, learning the work
+       from the people already doing it.</p>
+    <p>That is the part of his story a competitor cannot reproduce. Anyone can buy machinery. Anyone
+       can hire a pattern maker. Nobody else arrived here as a teenager and learned this trade from
+       the bottom of it.</p>
+  </div>
+  <p class="pull">He did not inherit a trade. He carried one.</p>
+  <div class="chapter-lead">
+    <!-- PLACEHOLDER IMAGE: press photograph, to be replaced before going live -->
+    <figure class="plate"><img src="img/jay-close.jpg" alt="Jay Adoni" width="900" height="900"><figcaption>Jay Adoni, at the factory</figcaption></figure>
+    <figure class="plate"><img src="img/lasts-wall.jpg" alt="A wall of wooden lasts in the factory" width="700" height="700"><figcaption>Lasts, kept for decades</figcaption></figure>
+  </div>
+  <div class="trio" style="margin-top:26px">
+    <figure class="plate"><img src="img/lasts-shelf.jpg" alt="Steel shanks racked and labelled by size" width="700" height="700"><figcaption>Racked by size, 37&frac12; to 40&frac12;</figcaption></figure>
+    <figure class="plate"><img src="img/leather-cutting.jpg" alt="Red leather cut by hand" width="700" height="700"><figcaption>Cutting, around the hide</figcaption></figure>
+    <figure class="plate"><img src="img/boot-on-last.jpg" alt="A white boot pulled over the last" width="700" height="700"><figcaption>On the last</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band-ivory" id="brooklyn"><div class="wrap">
+  <div class="chapter-lead">
+    <div class="txt">
+      <p class="snum">02 &mdash; Brooklyn, the 1970s</p>
+      <h2>He opened his own factory when New York still made things.</h2>
+      <p class="big">By the 1970s he had his own shoe factory in Brooklyn. That was still an ordinary
+         ambition then. The city had garment lofts and shoe floors and the people to staff them.</p>
+      <p>Then it went. The work moved overseas, the buildings became offices, and for six decades
+         nobody opened a shoe factory in New York City again. He kept making shoes anyway.</p>
+    </div>
+    <figure class="plate"><img src="img/singer-machine.jpg" alt="An old Singer industrial sewing machine" width="1100" height="704"><figcaption>The machines outlive the fashions</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="return"><div class="wrap">
+  <div class="col">
+    <p class="snum">03 &mdash; The Return</p>
+    <h2>The next shoe factory to open in this city was his family&rsquo;s.</h2>
+    <p class="big">In 2012 the Adoni Factory Group opened the first full-production shoe factory New
+       York City had seen in more than sixty years. The last one before it was his own, in Brooklyn.</p>
+    <p>They bought Klingbiel, a professional skating-boot maker out in Jamaica, Queens, and moved it
+       into Midtown. Today the floor turns out around 220 pairs a day, bespoke and production, and
+       makes custom boots for professional athletes &mdash; among them the American Olympian
+       Sasha Cohen.</p>
+  </div>
+  <div class="chapter-lead rev">
+    <figure class="plate"><img src="img/stitching-insole.jpg" alt="An insole stitched on the machine" width="700" height="700"><figcaption>West 38th Street, mid-build</figcaption></figure>
+    <div class="txt">
+      <p class="pull" style="margin-top:0">One man&rsquo;s factory closed the last chapter. His sons&rsquo; factory opened the next one.</p>
+      <p>Two addresses, forty years apart, and the same trade carried between them by one person.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="band-ivory" id="craft"><div class="wrap">
+  <div class="col">
+    <p class="snum">04 &mdash; The Craft</p>
+    <h2>What he actually knows how to do.</h2>
+    <p class="big">A shoe is roughly forty pieces and six disciplines. A full-production factory means
+       all of them happen under one roof, by people who have done them for thirty years. This is the
+       knowledge he carried over and spent a lifetime keeping alive.</p>
+  </div>
+  <div class="anat">
+    <div class="part"><b>Pattern</b><span>The shoe taken apart and drawn flat. Everything after this is wrong if this is wrong.</span></div>
+    <div class="part"><b>Cutting</b><span>Leather chosen and cut by hand, around the flaws in the hide.</span></div>
+    <div class="part"><b>Upper</b><span>Pieces stitched into the shape that will cover the foot.</span></div>
+    <div class="part"><b>Lasting</b><span>The upper pulled over the last and held. This is where a shoe becomes a shoe.</span></div>
+    <div class="part"><b>Bottoming</b><span>Sole and heel attached. The part that decides how long it lasts.</span></div>
+    <div class="part"><b>Finishing</b><span>Edges, burnishing, hardware, and the last inspection before the box.</span></div>
+  </div>
+  <div class="trio">
+    <figure class="plate"><img src="img/leather-cutting.jpg" alt="Red leather cut by hand" width="700" height="700"><figcaption>Cutting, around the hide</figcaption></figure>
+    <figure class="plate"><img src="img/stitching-insole.jpg" alt="An insole stitched on the machine" width="700" height="700"><figcaption>Stitching the insole</figcaption></figure>
+    <figure class="plate"><img src="img/leather-zip.jpg" alt="Perforated leather and brass hardware" width="820" height="820"><figcaption>Brogueing and hardware</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band-navy" id="name"><div class="wrap">
+  <div class="col">
+    <p class="snum">05 &mdash; His Name</p>
+    <h2>For a manufacturer, your own label is the last thing you do.</h2>
+    <p class="big">He spent a career making shoes that carried other people&rsquo;s names. The Jay
+       Adoni line was built across Venice, Novo Hamburgo and New York &mdash; the three places a
+       manufacturer goes when the work has to be done by people who have done it before.</p>
+  </div>
+  <div class="cities">
+    <div class="city"><span>Italy</span><b>Venice</b><p>Leather and finishing, from a tradition that never stopped.</p></div>
+    <div class="city"><span>Brazil</span><b>Novo Hamburgo</b><p>The country&rsquo;s shoemaking capital, and its deepest bench of makers.</p></div>
+    <div class="city"><span>United States</span><b>New York</b><p>West 38th Street. His own floor, his own machines.</p></div>
+  </div>
+  <div class="duo">
+    <figure class="plate"><img src="img/trend-spotting.jpg" alt="Jay Adoni footwear on a trade magazine page" width="1000" height="697"><figcaption>The line, in the trade press</figcaption></figure>
+    <div>
+      <blockquote style="border-left-color:var(--brass-lt)">
+        <p style="color:var(--paper)">The first new shoe factory in New York City since Jay Adoni
+           opened his first factory in Brooklyn in the 1970s.</p>
+        <cite style="color:#9C8B7C">Inc. &middot; on the Adoni Group</cite>
+      </blockquote>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="col">
+    <p class="snum">06 &mdash; The Work</p>
+    <h2>Sixty years of it, and the photographs he kept.</h2>
+    <p>Samples, showrooms, the expo floor, shipping days. Not a lookbook &mdash; a working record.</p>
+  </div>
+  <div class="mosaic">
+    <figure class="plate"><img src="img/shelves-heels.jpg" alt="Shelves of heels in the showroom" width="820" height="820"><figcaption>The showroom wall</figcaption></figure>
+    <figure class="plate"><img src="img/gold-heels.jpg" alt="Gold platform heels" width="700" height="700"><figcaption>Finished</figcaption></figure>
+    <figure class="plate"><img src="img/gladiator-pair.jpg" alt="Gladiator heels on a bench" width="820" height="820"><figcaption>Samples on the bench</figcaption></figure>
+    <figure class="plate"><img src="img/wedge-boots.jpg" alt="Suede wedge boots" width="820" height="820"><figcaption>Suede, cut and lasted</figcaption></figure>
+    <figure class="plate"><img src="img/factory-team.jpg" alt="Factory staff with finished boxes" width="700" height="700"><figcaption>A shipping day</figcaption></figure>
+    <figure class="plate"><img src="img/ffany-welcome.jpg" alt="The FFANY New York Shoe Expo entrance" width="820" height="820"><figcaption>New York Shoe Expo</figcaption></figure>
+    <figure class="plate"><img src="img/showroom-crowd.jpg" alt="A crowded showroom in market week" width="820" height="820"><figcaption>Market week</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band-ivory" id="legacy"><div class="wrap">
+  <div class="col">
+    <p class="snum">07 &mdash; What Follows</p>
+    <h2>He wanted to teach it before it disappeared.</h2>
+    <p class="big">Jay talked about opening schools to teach shoemaking, because the people who knew
+       how to do it were not being replaced. That is now a school in the Garment District, on the
+       same floor as the work.</p>
+    <p>Students take a shoe apart, make the pattern, choose the leather, cut, assemble, attach the
+       bottom, and leave with a finished pair &mdash; taught by makers with more than thirty years
+       each. His sons run the group and the design. Both of them learned it standing next to him.</p>
+  </div>
+  <div class="legacy">
+    <div class="leg"><b>Jensen Adoni</b><span>President of the group. Co-founded Modern Vice with his brother.</span></div>
+    <div class="leg"><b>Jordan Adoni</b><span>Design and marketing. Bespoke work has included a collection for Lenny Kravitz.</span></div>
+    <div class="leg"><b>The Academy</b><span>Shoemaking taught in the Garment District, a few days at the bench.</span></div>
+    <div class="leg"><b>Four labels</b><span>Jay Adoni &middot; Klingbiel &middot; Modern Vice &middot; GiraffeWalk</span></div>
+  </div>
+  <div class="chapter-lead rev" style="margin-top:44px">
+    <!-- PLACEHOLDER IMAGE: press photograph, to be replaced before going live -->
+    <figure class="plate"><img src="img/jay-doorway.jpg" alt="Jay Adoni" width="880" height="1100"><figcaption>Still on the floor</figcaption></figure>
+    <div class="txt">
+      <p class="pull" style="margin-top:0">He spent his life making shoes. Now he is teaching people how.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="band-navy"><div class="wrap">
+  <div class="col">
+    <p class="snum">08 &mdash; Find Him</p>
+    <h2>Third floor, West 38th Street.</h2>
+  </div>
+  <div class="cgrid">
+    <div><h4>The Factory</h4><p>247 West 38th Street<br>3rd Floor<br>New York, NY 10018</p></div>
+    <div><h4>The Group</h4><p>The Adoni Group<br>Jay Adoni, founder<br>Jensen Adoni, President</p></div>
+    <div><h4>On One Floor</h4><p>Bespoke &middot; Private label<br>Skating boots &middot; Teaching</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>Jay Adoni &middot; Shoemaker &middot; New York</span>
+  <span>Draft &mdash; not published</span>
+</div></footer>
+
+
+</body>
+</html>
