@@ -21,7 +21,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
   font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 .wrap{max-width:1120px;margin:0 auto;padding:0 30px}
 .col{max-width:660px}
 
@@ -91,10 +91,16 @@ figcaption{font-family:var(--cond);font-size:13px;letter-spacing:.11em;text-tran
 .band-navy figcaption{color:#9C8B7C}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
 .trio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:16px;margin-top:44px}
 .mosaic figure:nth-child(1){grid-column:span 2;grid-row:span 2}
 .wide{margin-top:44px}
-.plate img{border:1px solid var(--rule)}
+.plate img{border:1px solid var(--rule);width:100%;object-fit:cover}
+.trio .plate img,.mosaic .plate img,.chapter-lead .plate img{aspect-ratio:1/1}
+.mosaic figure:nth-child(1) img{aspect-ratio:1/1}
+.duo .plate img{aspect-ratio:3/2}
+.wide .plate img{aspect-ratio:16/10}
+.plate.tall img{aspect-ratio:4/5}
+.plate.land img{aspect-ratio:3/2}
 .band-navy .plate img{border-color:rgba(247,243,234,.2)}
 
 /* anatomy diagram */
@@ -127,14 +133,17 @@ blockquote cite{font-style:normal;font-family:var(--cond);font-size:13.5px;lette
 footer{padding:28px 0 44px;background:var(--navy);color:#A9998A;font-size:14.5px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
+@media(max-width:1024px){ .mosaic{grid-template-columns:repeat(3,1fr)} }
 @media(max-width:860px){
   .nl{display:none}
   .hero-grid{grid-template-columns:1fr;gap:30px}
   .act{grid-template-columns:1fr;gap:6px;padding:22px 0}
   .fig{border-right:0;border-bottom:1px solid var(--rule)}
-  .duo,.trio{grid-template-columns:1fr}
+  .duo{grid-template-columns:1fr}
+  .trio{grid-template-columns:1fr 1fr}
+  .chapter-lead .plate,.duo .plate,.hero-split .plate{max-width:520px;margin-inline:auto}
   .mosaic{grid-template-columns:1fr 1fr}
-  .mosaic figure:nth-child(1){grid-column:span 2;grid-row:auto}
+  .mosaic{grid-template-columns:repeat(3,1fr)}
   .cities{grid-template-columns:1fr}
   .city{border-right:0;border-bottom:1px solid rgba(247,243,234,.18)}
   section{padding:52px 0} .hero{padding:48px 0 0}
@@ -163,6 +172,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .hero-split,.chapter-lead{grid-template-columns:1fr;gap:26px}
   .chapter-lead.rev .txt{order:0}
 }
+@media(max-width:560px){
+  .mosaic{grid-template-columns:repeat(2,1fr)}
+  .mosaic figure:nth-child(1){grid-column:span 2;grid-row:span 2}
+}
 </style>
 </head>
 <body>
@@ -186,11 +199,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="hero-split">
     <!-- PLACEHOLDER IMAGE: press photograph, to be replaced with Jay's own before this goes live -->
     <figure class="plate hero-portrait">
-      <img src="img/jay-portrait.jpg" alt="Jay Adoni in the showroom" width="1120" height="1400">
+      <img src="img/jay-portrait.jpg" alt="Jay Adoni in the showroom" width="1120" height="1400" fetchpriority="high" decoding="async">
       <figcaption>Jay Adoni</figcaption>
     </figure>
     <div>
-      <figure class="plate"><img src="img/jayadoni-insoles.jpg" alt="Jay Adoni branded insoles stamped Made in Italy" width="700" height="700"><figcaption>His name, stamped into the insole</figcaption></figure>
+      <figure class="plate"><img src="img/jayadoni-insoles.jpg" alt="Jay Adoni branded insoles stamped Made in Italy" width="700" height="700" loading="lazy" decoding="async"><figcaption>His name, stamped into the insole</figcaption></figure>
       <p class="kicker">Sixty years in, the name on the shoe is finally his own.</p>
     </div>
   </div>
@@ -218,13 +231,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <p class="pull">He did not inherit a trade. He carried one.</p>
   <div class="chapter-lead">
     <!-- PLACEHOLDER IMAGE: press photograph, to be replaced before going live -->
-    <figure class="plate"><img src="img/jay-close.jpg" alt="Jay Adoni" width="900" height="900"><figcaption>Jay Adoni, at the factory</figcaption></figure>
-    <figure class="plate"><img src="img/lasts-wall.jpg" alt="A wall of wooden lasts in the factory" width="700" height="700"><figcaption>Lasts, kept for decades</figcaption></figure>
+    <figure class="plate"><img src="img/jay-close.jpg" alt="Jay Adoni" width="900" height="900" loading="lazy" decoding="async"><figcaption>Jay Adoni, at the factory</figcaption></figure>
+    <figure class="plate"><img src="img/lasts-wall.jpg" alt="A wall of wooden lasts in the factory" width="700" height="700" loading="lazy" decoding="async"><figcaption>Lasts, kept for decades</figcaption></figure>
   </div>
   <div class="trio" style="margin-top:26px">
-    <figure class="plate"><img src="img/lasts-shelf.jpg" alt="Steel shanks racked and labelled by size" width="700" height="700"><figcaption>Racked by size, 37&frac12; to 40&frac12;</figcaption></figure>
-    <figure class="plate"><img src="img/leather-cutting.jpg" alt="Red leather cut by hand" width="700" height="700"><figcaption>Cutting, around the hide</figcaption></figure>
-    <figure class="plate"><img src="img/boot-on-last.jpg" alt="A white boot pulled over the last" width="700" height="700"><figcaption>On the last</figcaption></figure>
+    <figure class="plate"><img src="img/lasts-shelf.jpg" alt="Steel shanks racked and labelled by size" width="700" height="700" loading="lazy" decoding="async"><figcaption>Racked by size, 37&frac12; to 40&frac12;</figcaption></figure>
+    <figure class="plate"><img src="img/leather-cutting.jpg" alt="Red leather cut by hand" width="679" height="679" loading="lazy" decoding="async"><figcaption>Cutting, around the hide</figcaption></figure>
+    <figure class="plate"><img src="img/boot-on-last.jpg" alt="A white boot pulled over the last" width="700" height="700" loading="lazy" decoding="async"><figcaption>On the last</figcaption></figure>
   </div>
 </div></section>
 
@@ -238,7 +251,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <p>Then it went. The work moved overseas, the buildings became offices, and for six decades
          nobody opened a shoe factory in New York City again. He kept making shoes anyway.</p>
     </div>
-    <figure class="plate"><img src="img/singer-machine.jpg" alt="An old Singer industrial sewing machine" width="1100" height="704"><figcaption>The machines outlive the fashions</figcaption></figure>
+    <figure class="plate land"><img src="img/singer-machine.jpg" alt="An old Singer industrial sewing machine" width="1056" height="704" loading="lazy" decoding="async"><figcaption>The machines outlive the fashions</figcaption></figure>
   </div>
 </div></section>
 
@@ -254,7 +267,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
        Sasha Cohen.</p>
   </div>
   <div class="chapter-lead rev">
-    <figure class="plate"><img src="img/stitching-insole.jpg" alt="An insole stitched on the machine" width="700" height="700"><figcaption>West 38th Street, mid-build</figcaption></figure>
+    <figure class="plate"><img src="img/stitching-insole.jpg" alt="An insole stitched on the machine" width="700" height="700" loading="lazy" decoding="async"><figcaption>West 38th Street, mid-build</figcaption></figure>
     <div class="txt">
       <p class="pull" style="margin-top:0">One man&rsquo;s factory closed the last chapter. His sons&rsquo; factory opened the next one.</p>
       <p>Two addresses, forty years apart, and the same trade carried between them by one person.</p>
@@ -279,9 +292,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="part"><b>Finishing</b><span>Edges, burnishing, hardware, and the last inspection before the box.</span></div>
   </div>
   <div class="trio">
-    <figure class="plate"><img src="img/leather-cutting.jpg" alt="Red leather cut by hand" width="700" height="700"><figcaption>Cutting, around the hide</figcaption></figure>
-    <figure class="plate"><img src="img/stitching-insole.jpg" alt="An insole stitched on the machine" width="700" height="700"><figcaption>Stitching the insole</figcaption></figure>
-    <figure class="plate"><img src="img/leather-zip.jpg" alt="Perforated leather and brass hardware" width="820" height="820"><figcaption>Brogueing and hardware</figcaption></figure>
+    <figure class="plate"><img src="img/pink-bootie.jpg" alt="A pink suede bootie with leather straps and buckles" width="820" height="820" loading="lazy" decoding="async"><figcaption>Suede and strapping, close up</figcaption></figure>
+    <figure class="plate"><img src="img/leather-zip.jpg" alt="Perforated leather and brass hardware" width="820" height="820" loading="lazy" decoding="async"><figcaption>Brogueing and hardware</figcaption></figure>
+    <figure class="plate"><img src="img/rosegold-shoes.jpg" alt="Rose gold pointed flats, worn" width="752" height="752" loading="lazy" decoding="async"><figcaption>Finished, and worn</figcaption></figure>
   </div>
 </div></section>
 
@@ -299,7 +312,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="city"><span>United States</span><b>New York</b><p>West 38th Street. His own floor, his own machines.</p></div>
   </div>
   <div class="duo">
-    <figure class="plate"><img src="img/trend-spotting.jpg" alt="Jay Adoni footwear on a trade magazine page" width="1000" height="697"><figcaption>The line, in the trade press</figcaption></figure>
+    <figure class="plate"><img src="img/trend-spotting.jpg" alt="Jay Adoni footwear on a trade magazine page" width="1000" height="667" loading="lazy" decoding="async"><figcaption>The line, in the trade press</figcaption></figure>
     <div>
       <blockquote style="border-left-color:var(--brass-lt)">
         <p style="color:var(--paper)">The first new shoe factory in New York City since Jay Adoni
@@ -317,13 +330,15 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <p>Samples, showrooms, the expo floor, shipping days. Not a lookbook &mdash; a working record.</p>
   </div>
   <div class="mosaic">
-    <figure class="plate"><img src="img/shelves-heels.jpg" alt="Shelves of heels in the showroom" width="820" height="820"><figcaption>The showroom wall</figcaption></figure>
-    <figure class="plate"><img src="img/gold-heels.jpg" alt="Gold platform heels" width="700" height="700"><figcaption>Finished</figcaption></figure>
-    <figure class="plate"><img src="img/gladiator-pair.jpg" alt="Gladiator heels on a bench" width="820" height="820"><figcaption>Samples on the bench</figcaption></figure>
-    <figure class="plate"><img src="img/wedge-boots.jpg" alt="Suede wedge boots" width="820" height="820"><figcaption>Suede, cut and lasted</figcaption></figure>
-    <figure class="plate"><img src="img/factory-team.jpg" alt="Factory staff with finished boxes" width="700" height="700"><figcaption>A shipping day</figcaption></figure>
-    <figure class="plate"><img src="img/ffany-welcome.jpg" alt="The FFANY New York Shoe Expo entrance" width="820" height="820"><figcaption>New York Shoe Expo</figcaption></figure>
-    <figure class="plate"><img src="img/showroom-crowd.jpg" alt="A crowded showroom in market week" width="820" height="820"><figcaption>Market week</figcaption></figure>
+    <figure class="plate"><img src="img/shelves-heels.jpg" alt="Shelves of heels in the showroom" width="820" height="820" loading="lazy" decoding="async"><figcaption>The showroom wall</figcaption></figure>
+    <figure class="plate"><img src="img/gold-heels.jpg" alt="Gold platform heels" width="640" height="640" loading="lazy" decoding="async"><figcaption>Finished</figcaption></figure>
+    <figure class="plate"><img src="img/gladiator-pair.jpg" alt="Gladiator heels on a bench" width="640" height="640" loading="lazy" decoding="async"><figcaption>Samples on the bench</figcaption></figure>
+    <figure class="plate"><img src="img/wedge-boots.jpg" alt="Suede wedge boots" width="640" height="640" loading="lazy" decoding="async"><figcaption>Suede, cut and lasted</figcaption></figure>
+    <figure class="plate"><img src="img/factory-team.jpg" alt="Factory staff with finished boxes" width="640" height="640" loading="lazy" decoding="async"><figcaption>A shipping day</figcaption></figure>
+    <figure class="plate"><img src="img/ffany-welcome.jpg" alt="The FFANY New York Shoe Expo entrance" width="640" height="640" loading="lazy" decoding="async"><figcaption>New York Shoe Expo</figcaption></figure>
+    <figure class="plate"><img src="img/showroom-crowd.jpg" alt="A crowded showroom in market week" width="640" height="640" loading="lazy" decoding="async"><figcaption>Market week</figcaption></figure>
+    <figure class="plate"><img src="img/showroom-hands.jpg" alt="A buyer handling a fringed shoe in the showroom" width="640" height="640" loading="lazy" decoding="async"><figcaption>A buyer, deciding</figcaption></figure>
+    <figure class="plate"><img src="img/event-podium.jpg" alt="An opening event with press and cameras" width="640" height="640" loading="lazy" decoding="async"><figcaption>An opening, with the press</figcaption></figure>
   </div>
 </div></section>
 
@@ -346,7 +361,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
   <div class="chapter-lead rev" style="margin-top:44px">
     <!-- PLACEHOLDER IMAGE: press photograph, to be replaced before going live -->
-    <figure class="plate"><img src="img/jay-doorway.jpg" alt="Jay Adoni" width="880" height="1100"><figcaption>Still on the floor</figcaption></figure>
+    <figure class="plate tall"><img src="img/jay-doorway.jpg" alt="Jay Adoni" width="880" height="1100" loading="lazy" decoding="async"><figcaption>Still on the floor</figcaption></figure>
     <div class="txt">
       <p class="pull" style="margin-top:0">He spent his life making shoes. Now he is teaching people how.</p>
     </div>

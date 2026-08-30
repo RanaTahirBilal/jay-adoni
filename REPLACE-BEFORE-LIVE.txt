@@ -1,21 +1,37 @@
-BEFORE THIS SITE GOES ON JAY'S DOMAIN
-=====================================
+JAY ADONI SITE — WHAT MUST BE REPLACED BEFORE THIS GOES ON A LIVE DOMAIN
+========================================================================
 
-Three images in img/ are press photographs used as placeholders for the demo.
-They are NOT licensed for publication and must be swapped before the site is
-deployed anywhere public:
+1. THREE PORTRAIT PLACEHOLDERS
+   img/jay-portrait.jpg   hero, 4:5   1120 x 1400
+   img/jay-close.jpg      ch.01, 1:1   900 x 900
+   img/jay-doorway.jpg    ch.07, 4:5   880 x 1100
 
-  img/jay-portrait.jpg   hero portrait
-  img/jay-close.jpg      chapter 01, The Beginning
-  img/jay-doorway.jpg    chapter 07, What Follows
+   These are press photographs. They are stand-ins only.
 
-Each one is also marked with an HTML comment in index.html — search for
-"PLACEHOLDER IMAGE".
+   NOTE: jay-close.jpg and jay-doorway.jpg are two crops of the SAME
+   photograph (same shoot, same clothing, same location). The page reads
+   as if it shows him twice. The three replacements must be three
+   DIFFERENT photographs.
 
-Replace with photographs Jay owns, or licensed copies of the originals.
-Keep the same crops: 4:5 portrait, 1:1 square, 4:5 portrait.
+   Supply at 2x the sizes above or larger. Faces should sit in the upper
+   third; the crop keeps heads high in frame.
 
-Every other image in img/ is from Jay's own Instagram account.
+2. THE OTHER 20 IMAGES
+   Cropped from the public Instagram grid at jayadoni. Screen resolution
+   only (640-1120px). They are sharp at desktop but soft on a retina
+   tablet. Original files would fix that.
 
-The page is currently set to noindex,nofollow. Remove that only when the
-images above have been replaced.
+3. PEOPLE WHO ARE NOT JAY
+   These frames contain identifiable third parties:
+     lasts-wall.jpg, factory-team.jpg, showroom-crowd.jpg,
+     showroom-hands.jpg, event-podium.jpg
+   Jay's call whether they stay.
+
+4. UNVERIFIED CAPTION
+   lasts-wall.jpg is captioned "Lasts, kept for decades" but the frame is
+   mostly a person standing in front of the last wall. Either the person
+   is identified and the caption changed, or the image is replaced.
+
+5. THE PAGE IS SET noindex,nofollow
+   Footer reads "Draft - not published". Both must be removed
+   deliberately, not by accident.
