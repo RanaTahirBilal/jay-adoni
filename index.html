@@ -476,12 +476,26 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       });
     });
 
-    /* safety sweep: anything on screen after 3.5s is shown regardless */
-    setTimeout(function(){
+    /* Safety net. IntersectionObserver does not fire while a tab is hidden, so a
+       link opened in a background tab can sit on unrevealed content. Sweep on
+       every visibility change, repeatedly for a while, and finally reveal
+       everything outright so nothing can ever be stuck invisible. */
+    function sweep(){
       Array.prototype.forEach.call(document.querySelectorAll('.rv:not(.in),.plate:not(.in)'),function(el){
-        if(el.getBoundingClientRect().top < window.innerHeight*1.2) el.classList.add('in');
+        if(el.getBoundingClientRect().top < window.innerHeight*1.35) el.classList.add('in');
       });
-    },3500);
+    }
+    function revealAll(){
+      Array.prototype.forEach.call(document.querySelectorAll('.rv:not(.in),.plate:not(.in)'),function(el){
+        el.style.transitionDelay='0ms'; el.classList.add('in');
+      });
+    }
+    document.addEventListener('visibilitychange',function(){
+      if(document.visibilityState==='visible'){ sweep(); setTimeout(sweep,120); }
+    });
+    window.addEventListener('pageshow',sweep);
+    var ticks=0, iv=setInterval(function(){ sweep(); if(++ticks>16) clearInterval(iv); },1200);
+    setTimeout(revealAll,22000);
   }catch(err){ root.classList.remove('anim'); }            /* fail open */
 })();
 </script>
