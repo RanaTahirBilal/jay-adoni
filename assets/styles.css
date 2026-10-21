@@ -460,3 +460,7 @@ html.menu-open { overflow: hidden; }
 .today-card .frame-gilt { padding: 12px; }
 .today-card h3 { font-family: var(--serif); font-weight: 700; font-size: var(--t-h3); }
 .today-card p { color: var(--ink-soft); }
+.factfile dl > div { grid-template-columns: minmax(140px, 0.8fr) minmax(0, 1.2fr); }
+.factfile dd { font-family: var(--serif); font-weight: 700; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); color: var(--ink); text-align: right; white-space: normal; }
+.factfile dd a { color: var(--red); }
+@media (max-width: 560px) { .factfile dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; } .factfile dd { text-align: left; } }
