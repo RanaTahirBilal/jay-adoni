@@ -369,3 +369,14 @@ a.box:active { transform: translateY(2px); }
 @media (max-width: 599px) { .letter .wax { width: 64px; height: 64px; font-size: 1.3rem; right: 14px; bottom: auto; top: 14px; } }
 .letter .note, .band .letter .note { color: var(--ink-soft); }
 .letter .wax { top: clamp(14px, 3vw, 28px); bottom: auto; }
+
+/* Photos */
+.photo-band { padding-block: clamp(40px, 6vw, 72px); }
+.photo-band .frame-gilt { margin-inline: auto; transform: rotate(var(--rot, -0.8deg)); }
+.photo-band .frame-gilt.land { max-width: 920px; }
+.photo-band .frame-gilt.tall { max-width: 460px; }
+.frame-gilt .inner img { display: block; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 4vw, 44px); align-items: start; }
+.gallery-item { display: grid; gap: 14px; margin: 0; }
+.gallery-item .frame-gilt { padding: 12px; }
+.gallery-item figcaption { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.04em; color: var(--ink-soft, #4a3f38); }
