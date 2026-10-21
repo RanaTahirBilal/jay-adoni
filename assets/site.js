@@ -74,5 +74,11 @@
     });
   }
 
+  // Forms: one click only, and a clear sending state.
+  [].forEach.call(document.querySelectorAll('[data-form]'), function (f) {
+    f.addEventListener('submit', function () { var b = f.querySelector('button[type=submit]'); if (b) { b.disabled = true; b.textContent = 'Sending'; } });
+  });
+  addEventListener('pageshow', function () { [].forEach.call(document.querySelectorAll('[data-form] button[type=submit]'), function (b) { b.disabled = false; b.textContent = 'Send message'; }); });
+
   window.__motionReady = true;
 })();
