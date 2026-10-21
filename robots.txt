@@ -31,4 +31,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ranatahirbilal.github.io/jay-adoni/sitemap.xml
+Sitemap: https://jayadoni.com/sitemap.xml
