@@ -21,11 +21,34 @@
     if (list.children.length) { list.hidden = false; actions.hidden = !actions.children.length; document.documentElement.classList.add('has-contact'); }
   }
 
+  var root = document.documentElement;
   var menu = document.querySelector('.menu');
   if (menu) {
+    menu.addEventListener('toggle', function () { root.classList.toggle('menu-open', menu.open); if (menu.open) root.classList.remove('head-hidden'); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) menu.open = false; });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
     document.addEventListener('click', function (e) { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    addEventListener('resize', function () { if (menu.open && innerWidth > 560) root.classList.remove('head-hidden'); }, { passive: true });
+  }
+
+  // Header: compact once the page moves, and on small screens slide away while reading down, back on any scroll up.
+  var head = document.querySelector('[data-head]');
+  if (head) {
+    var py = scrollY, ticking = false;
+    var onScroll = function () {
+      ticking = false;
+      var y = scrollY, d = y - py;
+      root.classList.toggle('is-scrolled', y > 24);
+      if (Math.abs(d) > 6) {
+        var hide = d > 0 && y > 240 && innerWidth <= 900 && !(menu && menu.open);
+        root.classList.toggle('head-hidden', hide);
+        py = y;
+      }
+      if (y < 60) root.classList.remove('head-hidden');
+    };
+    addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    head.addEventListener('focusin', function () { root.classList.remove('head-hidden'); });
+    onScroll();
   }
 
   // Reveals in both scroll directions. Every decision is re-checked against the live layout.
