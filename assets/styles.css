@@ -464,3 +464,38 @@ html.menu-open { overflow: hidden; }
 .factfile dd { font-family: var(--serif); font-weight: 700; font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem); color: var(--ink); text-align: right; white-space: normal; }
 .factfile dd a { color: var(--red); }
 @media (max-width: 560px) { .factfile dl > div { grid-template-columns: minmax(0, 1fr); gap: 2px; } .factfile dd { text-align: left; } }
+
+/* ===== Mobile home (v4): face first, one clear message, thumb friendly ===== */
+@media (max-width: 979px) {
+  .hero .wrap { padding-block: 22px 56px; gap: 26px; justify-items: stretch; }
+  .hero .collage { display: contents; }
+  .hero .collage .frame-gilt { order: -1; position: relative; inset: auto; width: min(76%, 360px); justify-self: center; --rot: 1.5deg; margin-bottom: 8px; }
+  .hero .collage .seal { display: none; }
+  .hero .collage .ticket { order: 2; position: relative; inset: auto; width: 100%; max-width: 440px; justify-self: center; --rot: -1.5deg; }
+  .hero .copy { order: 1; gap: 18px; }
+}
+@media (max-width: 600px) {
+  .hero h1.name-h1 { font-size: 0.8rem; letter-spacing: 0.14em; line-height: 1.6; }
+  .hero .hero-line { font-size: clamp(2.15rem, 1.4rem + 4vw, 2.6rem); line-height: 1; }
+  .hero .lede { font-size: 1.05rem; }
+  .hero .actions { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  .hero .actions .btn { width: 100%; }
+  .hero .actions .link { justify-content: center; }
+  .marquee .row { padding-block: 10px; }
+  .marquee span { font-size: 1.2rem; }
+  .today .grid-today { gap: 28px; }
+  .today-cards { gap: 26px; }
+  /* readable small labels */
+  .kicker, .ticket dt, .receipt .foot, .figlabel, .license .l, .note, .field label, .mhead, .fhead, .channels dt { font-size: max(0.8125rem, 1em * 0.8); }
+  .kicker { font-size: 0.8125rem; letter-spacing: 0.14em; }
+  .ticket dt, .box .body .figlabel, .license .l, .field label, .mhead, .fhead, .channels dt { font-size: 0.8125rem; }
+  .note, .receipt .foot { font-size: 0.8125rem; }
+  .frame-gilt .plaque { font-size: 0.75rem; }
+}
+
+@media (max-width: 600px) {
+  .careers { display: grid; grid-auto-flow: column; grid-auto-columns: 82%; grid-template-columns: none; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding: 4px 0 18px; scrollbar-width: none; }
+  .careers::-webkit-scrollbar { display: none; }
+  .careers > .box { scroll-snap-align: start; }
+}
+@media (max-width: 600px) { .hero .ticket dl { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; } .hero .ticket .main { padding-block: 18px; } }
