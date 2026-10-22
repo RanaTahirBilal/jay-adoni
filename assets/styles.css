@@ -499,3 +499,15 @@ html.menu-open { overflow: hidden; }
   .careers > .box { scroll-snap-align: start; }
 }
 @media (max-width: 600px) { .hero .ticket dl { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; } .hero .ticket .main { padding-block: 18px; } }
+
+/* Press line in home hero and press page */
+.press-line { margin: 0 0 18px; max-width: 46ch; font-family: var(--serif); font-size: clamp(1rem, 0.95rem + 0.35vw, 1.2rem); line-height: 1.5; color: var(--cream); }
+.press-line a { color: var(--brass-hi); text-decoration: underline; text-underline-offset: 3px; }
+.press-line .press-more { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; }
+.press-tag { display: inline-block; margin-right: 8px; padding: 2px 10px; border: 1px solid var(--brass-hi); border-radius: 999px; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-hi); vertical-align: 2px; }
+.press-list { display: grid; gap: 22px; max-width: 52rem; }
+.press-card { padding: 26px 28px; }
+.press-card .h3 { margin: 8px 0 12px; }
+.press-card .h3 a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.press-card blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--ink); }
+.press-card blockquote p { margin: 0; }
