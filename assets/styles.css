@@ -511,3 +511,4 @@ html.menu-open { overflow: hidden; }
 .press-card .h3 a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 .press-card blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--ink); }
 .press-card blockquote p { margin: 0; }
+.foot-brand .social { display: flex; width: fit-content; }
