@@ -512,3 +512,6 @@ html.menu-open { overflow: hidden; }
 .press-card blockquote { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.5; color: var(--ink); }
 .press-card blockquote p { margin: 0; }
 .foot-brand .social { display: flex; width: fit-content; }
+.marquee-label { text-align: center; margin: 0; padding: 18px 16px 0; color: var(--red-deep); }
+footer { padding-bottom: 72px; }
+@media (max-width: 600px) { .to-top { width: 46px; height: 46px; font-size: 1.2rem; } }
