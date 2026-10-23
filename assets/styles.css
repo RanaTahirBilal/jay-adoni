@@ -515,3 +515,8 @@ html.menu-open { overflow: hidden; }
 .marquee-label { text-align: center; margin: 0; padding: 18px 16px 0; color: var(--red-deep); }
 footer { padding-bottom: 72px; }
 @media (max-width: 600px) { .to-top { width: 46px; height: 46px; font-size: 1.2rem; } }
+.related { padding-block: 44px; }
+.related .h3 { margin: 6px 0 14px; }
+.related-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px 28px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.related-list a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; font-family: var(--serif); font-size: 1.08rem; }
+.related-list a::before { content: "\203A"; color: var(--red); margin-right: 8px; text-decoration: none; display: inline-block; }
